@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} django templates {% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+    <body>
+        <!-- Esta se utiliza como plantilla 
+         header>nav>ul>li>a -->
+        
+         <!-- Menú de navegación -->
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'inicio:iniciov1' %}">Inicio</a></li>
+
+                </ul>
+            </nav>
+        </header>
+        <main>
+
+            <!-- Contenido específico de cada página -->
+            {% block content %}
+            {% endblock %}
+
+            <!-- Pie de página -->
+            <footer>
+                <p>&copy; Proyecto django Templates 2026</p>
+            </footer>
+        </main>
+
+    </body>
+</html>
